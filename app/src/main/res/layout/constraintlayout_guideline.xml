@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <!--
+    指导线：guideline
+
+    android:orientation="vertical"              设置guideline的方向
+    app:layout_constraintGuide_percent="0.5"    guideline位置百分比
+    app:layout_constraintGuide_begin="100dp"    guideline距离起点距离
+    app:layout_constraintGuide_end="100dp"      guideline距离结点距离
+    -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/bt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+</android.support.constraint.ConstraintLayout>

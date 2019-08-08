@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    percent：百分比
+
+    layout_constraintWidth_percent="0.6":   宽度百分比
+    layout_constraintHeight_percent="0.25": 高度百分比
+
+    开发中有这样一个需求，控件的宽高为父控件的一半，
+    那么我们可以这么去实现：
+    1. 首先设置布局的宽高为 0dp
+    2. app:layout_constraintWidth_percent="0.5"
+       app:layout_constraintHeight_percent="0.5"
+    -->
+    <Button
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="percent"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.4"/>
+
+</android.support.constraint.ConstraintLayout>

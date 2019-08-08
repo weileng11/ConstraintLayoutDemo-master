@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    layout_constraintHorizontal_chainStyle:
+    spread:         间隔相等
+    spread_inside:  间隔相等，但只存在中间
+    packed:         打包
+    -->
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@id/bt_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintEnd_toStartOf="@id/bt_3"
+        app:layout_constraintStart_toEndOf="@id/bt_1" />
+
+    <Button
+        android:id="@+id/bt_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_2" />
+
+
+</android.support.constraint.ConstraintLayout>

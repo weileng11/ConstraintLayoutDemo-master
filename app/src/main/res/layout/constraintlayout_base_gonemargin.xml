@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    goneMargin: 依赖的View设置Gone以后才会生效的属性
+
+    当 bt_2 设置 android:visibility="gone" 后，
+    bt_1 的 app:layout_goneMarginEnd="80dp" 就会生效。
+    -->
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bt_2"
+        app:layout_goneMarginEnd="80dp" />
+
+    <Button
+        android:id="@+id/bt_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/bt_1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

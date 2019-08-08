@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆心"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+    圆形定位:
+
+    //引用的控件ID
+    app:layout_constraintCircle="@+id/btn_2"
+    //圆半径
+    app:layout_constraintCircleRadius="100dp"
+    //偏移圆角度  水平右方向为0逆时针方向旋转
+    app:layout_constraintCircleAngle="45"
+    -->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点"
+        android:textAllCaps="false"
+        app:layout_constraintCircle="@id/bt_1"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="150dp" />
+
+</android.support.constraint.ConstraintLayout>

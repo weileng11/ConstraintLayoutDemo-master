@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+    layout_constrainedWidth: 强制约束宽高
+
+    控件的宽设置为 WRAP_CONTENT 时，
+    如果实际宽度超过了约束的最大宽度，那么约束会失效（高同理），
+    为了防止约束失效，增加了以下属性：
+    app:layout_constrainedWidth="true"     //默认false
+    app:layout_constrainedHeight="true"    //默认false
+    -->
+    <Button
+        android:id="@+id/bt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_1" />
+
+</android.support.constraint.ConstraintLayout>
